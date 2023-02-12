@@ -68,7 +68,7 @@ namespace CmdByteReplacer
         private static void hexToByte(List<byte> list, string line)
         {
             int count = line.Length;
-            for (int i = 0; i < count; i += 2)
+            for (int i = 0; i + 1 < count; i += 2)
             {
                 list.Add(Convert.ToByte(line.Substring(i, 2), 16));
             }
